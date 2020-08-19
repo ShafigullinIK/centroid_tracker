@@ -33,6 +33,4 @@ model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True).to(device)
 #############-Centroid-Tracker-###########################
 ct = CentroidTracker()
 
-# output = object_detection_tracking(image, ct, model)
-# cv2.imwrite(args['output'], output)
 read_write_video(args['input'], args['output'], model, ct)
