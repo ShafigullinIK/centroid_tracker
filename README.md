@@ -10,17 +10,20 @@
 
 Проект создавался с использованием conda в качестве пакетного менеджера и менеджера виртуальных окружений.
 Список всех необходимых для работы проекта пакетов приведён в файле `requirements.txt`.
+
+Пакеты находятся на разных каналах, поэтому сначала их необходимо добавить в conda:
+
+```sh
+conda config --add channels conda-forge
+conda config --add channels pytorch
+```
+
 Для создания нового окружения с установкой всех зависимостей используйте команду:
 
 ```sh
 conda create --name centroid_tracker --file requirements.txt
 ```
 
-либо команду из Makefile:
-
-```sh
-make env
-```
 
 ### Активируем окружение
 
@@ -31,11 +34,6 @@ make env
 conda activate centroid_tracker
 ```
 
-либо команду из Makefile:
-
-```sh
-make activate
-```
 
 ### Запускаем трекер
 
